@@ -1,0 +1,33 @@
+copy the text
+
+put it in a file :
+    └─$ touch 'file'
+    to make a new file
+
+    └─$ cat > file
+    to edit the file
+
+    then paste the text to the file
+
+    to exit the editor, press 'Ctrl + D'
+
+then run this command :
+    └─$ cat file | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+    the | symbol is the symbol of piping, used to continuing an output as an input
+    in this case, its piping the contents of 'file' to tr command
+
+    the tr command in stands for "translate" or "transliterate." 
+    it is primarily used to translate, delete, or squeeze characters.
+
+    in this case, it shifts each letter in the input string by 13 positions in the alphabet
+
+    this is a simple example of the ROT13 (rotate by 13 places) cipher
+    which is a simple letter substitution cipher that replaces a letter with the letter 13 positions after it in the alphabet.
+
+    'A-Za-z' represents the range of characters from A to Z in uppercase and lowercase.
+    'N-ZA-Mn-za-m' represents the rotated characters, where each letter is shifted 13 positions ahead in the alphabet.
+
+can also use external website to decipher, such as
+    dcode.fr
+    cyberchef.org

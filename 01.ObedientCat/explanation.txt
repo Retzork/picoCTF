@@ -1,0 +1,10 @@
+get the link for the download :
+    right click on the "Download flag" text
+    select the "Copy link address"
+
+download and open the file :
+    to download use 
+    └─$ wget 'links'
+
+    to read the content of a file
+    └─$ cat 'file'
