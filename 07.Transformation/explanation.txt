@@ -1,0 +1,13 @@
+wget the file
+
+inside is an already encrypted string
+
+how its encrypted is with the text in the question
+    ''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
+
+    this is a python code that encrypt a 'flag'
+    i made a simpler version of the encryptor so that its easier to under stand
+    i suggest you check it out [encryptor.py], then the decryptor [decryptor.py], then go here again
+
+run the decryptor with the encrypted string as an argument :
+    └─$ python3 decryptor.py $(cat enc)
