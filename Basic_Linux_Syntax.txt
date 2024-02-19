@@ -1,0 +1,12 @@
+cat
+cat >
+wget
+touch
+tr
+grep
+awk
+chmod
+exiftool
+nc
+
+piping

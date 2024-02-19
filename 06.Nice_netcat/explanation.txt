@@ -1,5 +1,34 @@
+this problem teaches us to use nc command
+its a way to talk to network connections, using TCP or UDP protocols
 
+basic syntax :
+    nc [options] [hostname] [port]
 
+in this case, we were given a hostname and a port 
+mercury.picoctf.net 43239
 
+we talk to it with nc command:
+    └─$ nc mercury.picoctf.net 43239
 
-└─$ nc mercury.picoctf.net 43239 | tr '\n' ' ' | awk '{ for (i=1; i<=NF; i++) printf "%c", $i }'
+it print a string of number between 0 - 127
+it indicate that its a decimal form of character
+
+we want to get it clean in one line, so we use tr
+    └─$ nc mercury.picoctf.net 43239 | tr '\n' ' '
+
+now that its in one line, we can either decipher it in a website such:
+    rapidtables.com
+
+or we can translate it ourselfes with piping ^_^
+
+to do that, we will use awk command, we will iterate through each character
+print its character form for each of them
+
+    for (i=1; i<=NF; i++)
+this is the loop
+
+    printf "%c", $i
+this is the conversion
+
+then we use it with piping along with the output of the string
+    └─$ nc mercury.picoctf.net 43239 | tr '\n' ' ' | awk '{ for (i=1; i<=NF; i++) printf "%c", $i }'
