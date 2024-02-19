@@ -1,0 +1,5 @@
+
+
+
+
+└─$ nc mercury.picoctf.net 43239 | tr '\n' ' ' | awk '{ for (i=1; i<=NF; i++) printf "%c", $i }'
