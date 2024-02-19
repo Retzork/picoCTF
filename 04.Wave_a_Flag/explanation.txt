@@ -17,3 +17,9 @@ it asks for -h argument
     though not all programs implements it
 
 then we get the flag
+
+
+different way :
+    theres a command 'string [file]' that output all string in that file
+    you can run it to our 'warm' file, and grep the flag
+    └─$ strings warm | grep pico

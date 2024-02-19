@@ -1,0 +1,35 @@
+download the photo
+we want to check the photo's metadata, to do that we can use exiftool
+you can download it first if you havent had it
+
+then run to see the metadata :
+    └─$ exiftool cat.jpg
+
+it print all its metadata
+if you see closely, the licence is in base64, we can assume that it may be something that has been ciphered
+
+then we decipher it:
+    i want to use piping to extract the ciphered text, to do that we can use grep
+    └─$ exiftool cat.jpg | grep Licence
+
+    running that will give us :
+        License                         : cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9
+    
+    but we only want the ciphered text
+    we need to seperate the text with ": " seperation using awk
+    we seperate the text to 2 part, before the ": " and after
+    we want the latter, so we print the 2nd element
+
+    └─$ exiftool cat.jpg | grep License | awk -F ": " '{print $2}'
+
+    this will give us just the ciphered text
+    lastly we need to decode it, we can use the base64 in linux to decipher it. base64 -d [string]
+    
+    └─$ exiftool cat.jpg | grep License | awk -F ": " '{print $2}' | base64 -d
+
+    and that gives us the flag
+
+grep is used to filter the text, in this case we want the line containing 'License'
+awk with -F argument is used to seperate text, by default it uses whitespace
+but in this case we want to seperate the string with ": " since its the last string before the text that we want
+then it return 2 element, but we only want the 2nd element, so we print the 2nd with '{print $2}'
