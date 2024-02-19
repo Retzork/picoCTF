@@ -1,0 +1,21 @@
+download all the files with wget
+ende.py is a cyphering tools
+the flag is the ciphered flag with pw as password
+so we need to run the ende.py to decipher the flag with pw
+
+to do that, we run the ende.py:
+    to do that, we need to run it with python3
+    └─$ python3 ende.py
+
+    if we run that, it will asks for an argument (-e or -d) and [file]
+    since we want to decipher the flag, we use -d argument, and flag.txt.en as the file argument
+    └─$ python3 ende.py -d flag.txt.en
+
+    if we run that, it asks for the password, you can copy the password and paste it
+    
+    but in the ende.py we can see that we can input the password as the 3rd (0 indexed) argument
+    so we can run this instead
+    └─$ python3 ende.py -d flag.txt.en $(cat pw.txt)
+
+    since the ende.py doesnt asks for the pw file name but instead the contents of it, we need to cat it first with that argument
+    $(cat pw.txt) is similiar to piping, but its for the outside of the bracket instead of the right side of |
