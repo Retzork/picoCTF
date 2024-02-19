@@ -1,2 +1,16 @@
 wget the files
-warm 
+if we cat the warm file, it display just a random binary string, in this case its an executable
+
+and to execute the file we need to change the modifier:
+    to do that, we can use the chmod command
+    theres a lot of way to do it, but using 777 as the argument will change the modifier to all useable
+    but it can also be done with +x (adding execute modifier) too
+    └─$ chmod 777 warm
+
+then we run the file with ./
+    └─$ ./warm
+
+it asks for -h argument 
+    └─$ ./warm -h
+
+then we get the flag
