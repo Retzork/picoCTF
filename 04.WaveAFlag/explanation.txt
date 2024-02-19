@@ -13,4 +13,7 @@ then we run the file with ./
 it asks for -h argument 
     └─$ ./warm -h
 
+    this is a way to teach us that -h or --help is the most common arguments to give to programs to get more information from them
+    though not all programs implements it
+
 then we get the flag
