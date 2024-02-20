@@ -1,0 +1,15 @@
+I will try to explain all of the basic linux syntax used in the process of solving the ctf
+
+# on progress
+cat
+cat >
+wget
+touch
+tr
+grep
+awk
+chmod
+exiftool
+nc
+
+piping

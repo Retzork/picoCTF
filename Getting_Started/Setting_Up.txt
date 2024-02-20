@@ -1,0 +1,7 @@
+I will walk you on how to having only your laptop/pc and an internet connection, to my ctf environment
+
+# on progress
+
+install vscode
+install kali, including the package needed
+sign up picoCTF
