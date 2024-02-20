@@ -4,7 +4,7 @@ Binary exploitation - Format String Vulnerabilities
 wget the file and see its content
 
 since we can only talk to the prgoram with the netcat, we need to make it give us the flag
-in line 91 and 93 there is a Vulnerabilities
+in line 91 and 93 there are a Vulnerabilities
 in line 91 we can input some string to the program
 then it will print what we just input in line 93
 
