@@ -1,0 +1,31 @@
+Stonks
+Binary exploitation - Format String Vulnerabilities
+
+wget the file and see its content
+
+since we can only talk to the prgoram with the netcat, we need to make it give us the flag
+in line 91 and 93 there is a Vulnerabilities
+in line 91 we can input some string to the program
+then it will print what we just input in line 93
+
+but the function used to print the string that we previously input is vulnerable, since it doesnt check the type of its content
+allowing us to inject a spesific character to get the previous data in the buffer
+
+in scanf '%x' is used to request a hexadecimal
+if printf recieve '%x' it will also request a hexadecimal to the buffer
+
+so if we input lots of '%x' in line 91
+the program will try to print lots of hexadecimal from the buffer
+including the flag that is also stored in the buffer (see line 66 and 72)
+
+so to solve this problem, we will input '1' to get to the vulnerable part
+then input lots of '%x' until we get the flag in the hex form
+
+we copy all the hex that is printed and decrypt it
+i used cyberchef (https://gchq.github.io/CyberChef/)
+
+put all the hex in the input, then we drag the 'from hex' operation
+we can already see it, but the ordering is swapped since its still in endian swapped
+
+we need to reverse the swap with endian too, we drag the 'swap endianness' operation
+its still in weird format, we will add more character in front of the input until it displays it correctly (i used 00)
