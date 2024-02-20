@@ -1,3 +1,6 @@
+Wave a Flag
+General SKill - Introduction to file managing (i guess)
+
 wget the files
 if we cat the warm file, it display just a random binary string, in this case its an executable
 

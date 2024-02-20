@@ -1,3 +1,6 @@
+Nice netcat
+General SKill - Introduction to the netcat
+
 this problem teaches us to use nc command
 its a way to talk to network connections, using TCP or UDP protocols
 

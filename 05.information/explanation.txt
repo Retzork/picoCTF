@@ -1,3 +1,6 @@
+information
+Forensics - metadata
+
 download the photo
 we want to check the photo's metadata, to do that we can use exiftool
 you can download it first if you havent had it
